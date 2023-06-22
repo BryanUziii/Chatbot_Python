@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
 
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+
 </head>
 <body>
-    <header><h3>Titulo</h3></header>
 
-    <main></main>
+    <div id="chatbot-form">
+        <input type="text" id="entrada" placeholder="Ingrese su pregunta" required>
+        <button id="btnEnviar" type="button">Enviar</button>
+    </div>
 
-    <footer><b>Pie de pagina</b></footer>
     
 
-    <script src="/public/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
 </body>
 </html>
