@@ -3,53 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot</title>
+    <title>Ejemplo</title>
 
-    <link rel="stylesheet" href="/static/css/styles.css">
-
+    <link rel="stylesheet" href="/static/css/stylesIndex.css">
 </head>
 <body>
-
     <header id="header">
-        <div class="header_leftSide">
+        <div class="header_top">
 
             <a class="hiperUpsin" href="http://www.upsin.edu.mx/" target="_blank" title="Ir al sitio web de UPSIN">
+                <center>
                 <img src="/static/img/letrasUpsin.png" alt="" class="nameUpsin">
+            </center>
             </a>
 
-            <a href="#">vinc1</a>
-            <a href="#">vinc2</a>
-            
         </div>
     </header>
 
     <main id="main">
-        <div class="main-content">
-            <div id="chat">
-                <!-- <div class="message user-message"><div class="message-content">Tú: asd</div></div>
-                <div class="message bot-message"><div class="message-content">Chatbot: Respuesta de ejemplo</div></div> -->
-            </div>
-      
-            <form id="chat-inputs">
-                <button type="button" id="btnLimpiar" class="btn">Limpiar Chat</button>
-            
-                <div class="divMsg">
-                    <input type="text" id="inputMensaje" placeholder="Escribe un mensaje">
-                    <button type="submit" class="btnEnviar">
-                        <svg class="enviar_icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                          </svg>
-                    </button>
+
+        <div id="chat">
+
+            <div class="chat-div bot-message">
+
+                <div class="chat-div-content">
+                    <div class="chat-img">
+                        <embed class="bot" src="/static/img/robot.svg" type="image/svg+xml" alt="Descripción de la imagen">
+                    </div>
+
+                    <div class="message bot-message"><div class="message-content">¡Hola! Soy un chatbot diseñado para ayudarte con tus preguntas y consultas sobre <strong>las estrategias didacticas</strong>. ¿En qué puedo asistirte hoy?</div></div>
                 </div>
-            
-            
-            </form>
+
+            </div>
+<!-- 
+            <div class="chat-div user-message">
+
+                <div class="chat-div-content">
+                    <div class="chat-img">
+                        <embed class="user" src="/static/img/person-circle.svg" type="image/svg+xml" alt="Descripción de la imagen">
+                    </div>
+
+                    <div class="message"><div class="message-content">Hola</div></div>
+                </div>
+
+            </div> -->
+ 
         </div>
 
+        <div id="chat-inputs">
+            <button type="button" id="btnLimpiar" class="btn">Limpiar Chat</button>
+        
+            <div class="divMsg">
+                <textarea type="text" id="inputMensaje" placeholder="Escribe un mensaje" cols="30" rows="1"></textarea>
+                <button type="button" id="btnEnviar" class="btnEnviar">
+                    <svg class="enviar_icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                      </svg>
+                </button>
+            </div>
 
+        </div>
     </main>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/static/js/scripts.js"></script>
 </body>

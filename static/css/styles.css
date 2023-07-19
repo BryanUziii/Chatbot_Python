@@ -6,61 +6,93 @@
 }
 
 body{
-    background-color: #cccccc;
+    display: block;
+    background-color: #b1b1b1;
+    height: 100%;
 }
 
 
-#header{
-    background-color: #33333388;
+#header {
+    background-color: #747373;
     display: inline-flex;
     height: 75px;
     width: 100%;
     padding: 10px;
 }
 
-.header_leftSide{
-    background-color: #8b323288;
+/*   
+  @media (max-width: 750px) {
+    #header {
+      display: inline-flex;
+    }
+
+    body #main {
+        margin: 0px;
+      }
+  } */
+
+
+.header_top{
+    /* background-color: #8b323288; */
     display: flex;
     
 }
 
     .hiperUpsin{
-        display: flex;
-        place-items: center;
         width: auto;
         max-height: 75px;
     }
 
-    .logoUpsin {
-        max-width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
-        height: 100%; /* Permite que la altura de la imagen se ajuste proporcionalmente al ancho */
-        display: block; /* Asegura que la imagen tenga un comportamiento de bloque para respetar los estilos */
-        border-radius: 5px; /* Esto agrega bordes redondeados a la imagen */
-    }
-
     .nameUpsin{
-        max-width: auto; /* Establece el ancho máximo de la imagen al 100% del contenedor */
-        height: 60%; /* Permite que la altura de la imagen se ajuste proporcionalmente al ancho */
+        max-width: 200px; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+        height: auto; /* Permite que la altura de la imagen se ajuste proporcionalmente al ancho */
         display: block; /* Asegura que la imagen tenga un comportamiento de bloque para respetar los estilos */
-        border-radius: 5px; /* Esto agrega bordes redondeados a la imagen */
     }
 
 
 #main{
+    display: block;
     padding: 10px 35px;
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    place-items: center; */
 }
 
-    .main-content{
-        width: auto;
-    }
+    /* .main-content{
+        width: 100%;
+        height: 100%;
+    } */
 
         #chat {        
-            min-height: 350px;
-            max-height: 350px;
-            border: 1px solid #ccc;
+            min-height: 500px;
+            /* max-height: 500px; */
+
+            height: 100%;
+            /* border: 1px solid #ccc; */
+            /* box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%); */
+            border-radius: 8px;
             overflow-y: scroll;
-            padding: 10px;
         }
+
+        #chat::-webkit-scrollbar {
+            width: 8px;
+          }
+          
+          #chat::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+          
+          #chat::-webkit-scrollbar-thumb {
+            background-color: #d4d4d4;
+            border-radius: 4px;
+          }
+          
+          #chat::-webkit-scrollbar-thumb:hover {
+            background-color: #a6a6a6;
+          }
+
+
 
         .message {
             margin-bottom: 10px;
@@ -82,6 +114,7 @@ body{
             min-height: 2.6em;
             text-shadow: 0 1px 0 rgba(0, 0, 0, 0.205);
         }
+        
 
         .bot-message {
             float: left;
@@ -99,13 +132,16 @@ body{
         }
 
         .message-content {
+            text-align: justify;
             padding: 5px;
         }
 
         #chat-inputs {
             display: flex;
+            /* position: fixed;
+            bottom: 0;
+            left: 0; */
             justify-content: center;
-            margin-top: 10px;
         }
 
   
@@ -115,22 +151,26 @@ body{
             justify-content: space-between;
             text-align: center;
             width: 100%;
-            margin-left: 5px;
             min-width: 150px;
+            height: auto;
+            margin-left: 5px;
         }
 
         #inputMensaje {
-            font-family: inherit;
-            font-size: inherit;
-            background-color: #f4f2f2;
-            border: none;
-            color: #646464;
-            padding: 0.7rem 1rem;
-            border-radius: 30px;
-            width: 100%;
-            transition: all ease-in-out .5s;
-            margin-right: -2rem;
-        }
+        font-family: inherit;
+        font-size: inherit;
+        background-color: #f4f2f2;
+        border: none;
+        color: #646464;
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        width: 100%;
+        transition: all ease-in-out .5s;
+        overflow-y: auto;
+        resize: none;
+        max-height: 5em; /* Ajusta el máximo de 5 filas visibles */
+        margin-right: -2rem;
+        } 
 
         #inputMensaje:hover, #inputMensaje:focus {
             box-shadow: 0 0 1em #00000013;
@@ -150,6 +190,23 @@ body{
             background-color: #f0eeee;
         }
 
+        #inputMensaje::-webkit-scrollbar {
+            width: 8px;
+          }
+          
+          #inputMensaje::-webkit-scrollbar-track {
+            background-color: #f5f5f5;
+          }
+          
+          #inputMensaje::-webkit-scrollbar-thumb {
+            background-color: #d4d4d4;
+            border-radius: 4px;
+          }
+          
+          #inputMensaje::-webkit-scrollbar-thumb:hover {
+            background-color: #a6a6a6;
+          }
+
         .btnEnviar {
             border: none;
             background-color: #f4f2f2;
@@ -164,7 +221,7 @@ body{
         .enviar_icon {
             /* height: 1.3em;
             width: 1.3em; */
-            fill: #b4b4b4;
+            fill: #888888;
         }
 
 

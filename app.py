@@ -12,7 +12,7 @@ def index():
 @app.route('/chatbot', methods=['POST'])
 def chatbot():
     entrada = request.form.get('entrada')
-    respuesta = procesar_entrada(entrada)
+    respuesta = procesar_entrada(entrada.lower())
     return respuesta
 
 
