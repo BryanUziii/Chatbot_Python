@@ -15,12 +15,22 @@ body{
 
 
 #header {
-    background-color: #FAFAFA;
+    /* background-color: #FAFAFA; */
+    /* background-color: #555; */
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 10%, rgba(51,51,51,1) 50%, rgba(34,34,34,1) 90%);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.75);
     display: inline-flex;
-    height: 10vh;
+    height: 11vh;
     width: 100vw;
     padding: 10px;
 }
+
+    .header_main{
+        display: grid;
+        place-items: center;
+        width: 100vw;
+    }
 
     .hiperUpsin{
         width: auto;
@@ -43,7 +53,7 @@ body{
 
 #chat {
     place-items: center;
-    max-height: 85vh;
+    max-height: 88vh;
     height: 100%;
     /* border-radius: 8px; */
     overflow-y: scroll;
@@ -82,7 +92,7 @@ body{
 
 .chat-div-content{
     display: inline-flex;
-    width: 85vw;
+    width: 80vw;
     padding: 15px;
 }
 
@@ -119,6 +129,10 @@ body{
     will-change: box-shadow,transform;
     min-height: 2.6em;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.205);
+    /* background: rgb(53,55,64);
+    background: linear-gradient(90deg, rgba(53,55,64,1) 0%, rgba(51,51,51,1) 50%, rgba(53,55,64,1) 100%); */
+    background: rgb(53,55,64);
+    background: linear-gradient(90deg, rgba(53,55,64,1) 10%, rgba(56,58,67,1) 50%, rgba(53,55,64,1) 90%);
 }
 
 .user-message {
@@ -127,7 +141,9 @@ body{
     outline: 0;
     border: 0;
     will-change: box-shadow,transform;
-    background: #4d505e;
+    /* background: #4d505e; */
+    background: rgb(53,55,64);
+    background: linear-gradient(90deg, rgba(53,55,64,1) 10%, rgba(77,80,94,1) 50%, rgba(53,55,64,1) 90%);
     box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
 
     min-height: 2.6em;
@@ -152,7 +168,8 @@ body{
 
 
 #chat-inputs {
-    /* background-color:  blue; */
+    background: rgb(53,55,64);
+    background: linear-gradient(0deg, rgba(53,55,64,1) 50%, rgba(255,255,255,0) 100%);
 
     display: inline-flex;
     position: fixed;
@@ -199,13 +216,18 @@ margin-right: -2rem;
     background-color: #f0eeee;
 }
 
+/* #inputMensaje:focus + .btnEnviar {
+    transition: all 0.5s;
+    background-color: rgb(30, 255, 60);
+} */
+
+/* #inputMensaje:focus + .enviar_icon {
+    fill: red;
+} */
+
 #inputMensaje::-webkit-input-placeholder {
     font-weight: 100;
     color: #ccc;
-}
-
-#inputMensaje:focus + .search__button {
-    background-color: #f0eeee;
 }
 
 #inputMensaje::-webkit-scrollbar {
@@ -226,8 +248,10 @@ margin-right: -2rem;
   }
 
 .btnEnviar {
-    border: none;
+    border: solid white 0px;
+    border-radius: 7px;
     background-color: #f4f2f2;
+    /* padding: 7px; */
     margin-top: .1em;
     transform: translateX(-1em);
 }
@@ -239,7 +263,7 @@ margin-right: -2rem;
 .enviar_icon {
     /* height: 1.3em;
     width: 1.3em; */
-    fill: #888888;
+    fill: #888;
 }
 
 .btnEnviar:hover .enviar_icon{
